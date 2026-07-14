@@ -1,0 +1,23 @@
+[
+  {
+    "id": "d58c377b-1977-4e12-9e6e-59f4aca290f9",
+    "clientName": "María López",
+    "phone": "0991234567",
+    "service": "Tinturado",
+    "date": "2030-08-20",
+    "time": "10:00",
+    "status": "cancelada",
+    "createdAt": "2026-07-13T02:51:34.580Z",
+    "updatedAt": "2026-07-13T02:51:34.584Z"
+  },
+  {
+    "id": "0fda6162-b343-4c14-9909-e7659c84611e",
+    "clientName": "Nueva Cliente",
+    "phone": "0976543210",
+    "service": "Tinturado",
+    "date": "2030-08-20",
+    "time": "10:00",
+    "status": "pendiente",
+    "createdAt": "2026-07-13T02:51:34.588Z"
+  }
+]

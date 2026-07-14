@@ -1,0 +1,52 @@
+{
+  "name": "dlady-booking-cicd",
+  "version": "1.0.0",
+  "description": "Sistema de gestión de citas de D'Lady con flujo CI/CD",
+  "main": "src/server.js",
+  "type": "commonjs",
+  "scripts": {
+    "start": "node src/server.js",
+    "dev": "nodemon src/server.js",
+    "test": "jest --runInBand",
+    "test:coverage": "jest --coverage --runInBand",
+    "lint": "eslint .",
+    "check": "npm run lint && npm run test:coverage"
+  },
+  "keywords": [
+    "cicd",
+    "github-actions",
+    "nodejs",
+    "express",
+    "dlady"
+  ],
+  "author": "Equipo D'Lady",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.0",
+    "swagger-ui-express": "^5.0.1"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "jest": "^30.0.0",
+    "nodemon": "^3.1.0",
+    "supertest": "^7.0.0"
+  },
+  "jest": {
+    "testEnvironment": "node",
+    "collectCoverageFrom": [
+      "src/**/*.js",
+      "!src/server.js"
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 60,
+        "functions": 70,
+        "lines": 70,
+        "statements": 70
+      }
+    }
+  }
+}

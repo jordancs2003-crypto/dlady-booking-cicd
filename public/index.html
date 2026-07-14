@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+  <title>D'Lady | Gestión de citas</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <header class="header">
+    <div>
+      <span class="brand">D’LADY</span>
+      <p>Centro de belleza</p>
+    </div>
+
+    <a href="/api/docs" class="documentation">
+      Documentación API
+    </a>
+  </header>
+
+  <main class="container">
+    <section class="hero">
+      <div>
+        <span class="tag">CI/CD PROJECT</span>
+        <h1>Gestión inteligente de citas</h1>
+        <p>
+          Registra y administra las citas del Centro de Belleza
+          D’Lady desde una plataforma sencilla.
+        </p>
+      </div>
+
+      <div class="status-card">
+        <span class="status-dot"></span>
+        <div>
+          <strong>Sistema disponible</strong>
+          <p>Desplegado automáticamente</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="grid">
+      <article class="card">
+        <h2>Nueva cita</h2>
+
+        <form id="appointment-form">
+          <label>
+            Nombre del cliente
+            <input
+              id="clientName"
+              name="clientName"
+              type="text"
+              required
+            >
+          </label>
+
+          <label>
+            Teléfono
+            <input
+              id="phone"
+              name="phone"
+              type="tel"
+              required
+            >
+          </label>
+
+          <label>
+            Servicio
+            <select id="service" name="service" required>
+              <option value="">Seleccione</option>
+              <option value="Corte de cabello">Corte de cabello</option>
+              <option value="Tinturado">Tinturado</option>
+              <option value="Manicure">Manicure</option>
+              <option value="Pedicure">Pedicure</option>
+              <option value="Maquillaje">Maquillaje</option>
+              <option value="Masaje">Masaje</option>
+            </select>
+          </label>
+
+          <div class="form-row">
+            <label>
+              Fecha
+              <input id="date" name="date" type="date" required>
+            </label>
+
+            <label>
+              Hora
+              <input id="time" name="time" type="time" required>
+            </label>
+          </div>
+
+          <button type="submit">Registrar cita</button>
+        </form>
+
+        <p id="message" class="message"></p>
+      </article>
+
+      <article class="card">
+        <div class="card-header">
+          <div>
+            <span class="eyebrow">AGENDA</span>
+            <h2>Citas registradas</h2>
+          </div>
+
+          <button id="refresh-button" class="secondary-button">
+            Actualizar
+          </button>
+        </div>
+
+        <div id="appointments" class="appointment-list">
+          <p>Cargando citas...</p>
+        </div>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
