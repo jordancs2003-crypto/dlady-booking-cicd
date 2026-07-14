@@ -28,7 +28,7 @@ jobs:
 
     steps:
       - name: Descargar repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Configurar Node.js
         uses: actions/setup-node@v4
@@ -55,7 +55,7 @@ jobs:
 
     steps:
       - name: Descargar repositorio
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Convertir nombre de imagen a minúsculas
         id: image
